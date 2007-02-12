@@ -1,5 +1,5 @@
 Summary:	D2X-XL - port of Descent 2 to OpenGL
-Summary(pl):	D2X-XL - port Descenta 2 do OpenGL-a
+Summary(pl.UTF-8):   D2X-XL - port Descenta 2 do OpenGL-a
 Name:		d2x-xl
 Version:	1.5.112
 Release:	0.1
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 D2X-XL - port of Descent 2 to OpenGL.
 
-%description -l pl
+%description -l pl.UTF-8
 D2X-XL - port Descenta 2 do OpenGL-a.
 
 %prep
