@@ -1,17 +1,18 @@
 Summary:	D2X-XL - port of Descent 2 to OpenGL
 Summary(pl.UTF-8):	D2X-XL - port Descenta 2 do OpenGL-a
 Name:		d2x-xl
-Version:	1.5.112
+Version:	1.13.21
 Release:	0.1
 License:	GPLv2
 Group:		X11/Applications/Games
-Source0:	http://www.descent2.de/resources/%{name}-src-%{version}.tgz
-# Source0-md5:	8eefcfc57bcf27ff5fb91a3da750a87a
+Source0:	http://www.descent2.de/downloads/%{name}-src-%{version}.rar
+# Source0-md5:	cafe37ea82ba4c37da61c6a8c0c517f4
 URL:		http://www.descent2.de/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	unrar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,13 +22,16 @@ D2X-XL - port of Descent 2 to OpenGL.
 D2X-XL - port Descenta 2 do OpenGL-a.
 
 %prep
-%setup -q -n src
+%setup -q -c -T
+unrar x -idq %{SOURCE0}
+unrar x -idq d2x-xl-makefiles.rar
 
 %build
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+chmod u+x configure
 %configure
 %{__make}
 
