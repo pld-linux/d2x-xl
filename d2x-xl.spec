@@ -8,7 +8,6 @@ Group:		X11/Applications/Games
 Source0:	http://www.descent2.de/downloads/%{name}-src-%{version}.rar
 # Source0-md5:	c2e7c0874dab0f880b9670eb242bfc51
 URL:		http://www.descent2.de/
-BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
