@@ -15,6 +15,7 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	curl-devel
 BuildRequires:	openmotif-devel
 BuildRequires:	unrar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
