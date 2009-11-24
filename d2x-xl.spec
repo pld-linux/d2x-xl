@@ -28,7 +28,7 @@ D2X-XL - port Descenta 2 do OpenGL-a.
 
 %prep
 %setup -q -c -T
-unrar x -idq %{SOURCE0}
+unrar x -idq -o- %{SOURCE0}
 # INSTALL file will be overwrited
 rm INSTALL
 unrar x -idq d2x-xl-makefiles.rar
