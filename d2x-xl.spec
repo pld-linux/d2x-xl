@@ -17,6 +17,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	curl-devel
 BuildRequires:	openmotif-devel
+BuildRequires:	sed >= 4.0
 BuildRequires:	unrar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +33,8 @@ unrar x -idq -o- %{SOURCE0}
 # INSTALL file will be overwrited
 rm INSTALL
 unrar x -idq d2x-xl-makefiles.rar
+
+%{__sed} -i 's/-O3//' configure.ac
 
 %build
 %{__aclocal}
