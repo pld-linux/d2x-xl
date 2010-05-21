@@ -16,6 +16,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	curl-devel
+BuildRequires:	glew-devel
 BuildRequires:	openmotif-devel
 BuildRequires:	sed >= 4.0
 BuildRequires:	unrar
