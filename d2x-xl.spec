@@ -39,8 +39,8 @@ unrar x -idq d2x-xl-makefiles.rar
 
 %build
 %{__aclocal}
-#%%{__autoconf}
-#%%{__autoheader}
+%{__autoconf}
+%{__autoheader}
 %{__automake}
 chmod u+x configure
 %configure \
