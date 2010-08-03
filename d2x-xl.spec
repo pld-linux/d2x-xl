@@ -1,12 +1,12 @@
 Summary:	D2X-XL - port of Descent 2 to OpenGL
 Summary(pl.UTF-8):	D2X-XL - port Descenta 2 do OpenGL-a
 Name:		d2x-xl
-Version:	1.15.79
+Version:	1.15.83
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://www.descent2.de/downloads/%{name}-src-%{version}.rar
-# Source0-md5:	73adb8d81321edb3dc649905275132b1
+Source0:	http://www.descent2.de/downloads/%{name}-src-%{version}.7z
+# Source0-md5:	74337e929a4a6928dafbfffc5249a69c
 URL:		http://www.descent2.de/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
@@ -18,8 +18,8 @@ BuildRequires:	automake
 BuildRequires:	curl-devel
 BuildRequires:	glew-devel
 BuildRequires:	openmotif-devel
+BuildRequires:	p7zip
 BuildRequires:	sed >= 4.0
-BuildRequires:	unrar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,11 +29,9 @@ D2X-XL - port of Descent 2 to OpenGL.
 D2X-XL - port Descenta 2 do OpenGL-a.
 
 %prep
-%setup -q -c -T
-unrar x -idq -o- %{SOURCE0}
-# INSTALL file will be overwrited
-rm INSTALL
-unrar x -idq d2x-xl-makefiles.rar
+%setup -q -c -T -n %{name}
+7z x %{SOURCE0}
+7z x -y d2x-xl-makefiles.7z
 
 %{__sed} -i 's/-O3//' configure
 %{__sed} -i '/dialheap.h/d' main/gamedata.cpp
