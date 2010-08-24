@@ -1,12 +1,12 @@
 Summary:	D2X-XL - port of Descent 2 to OpenGL
 Summary(pl.UTF-8):	D2X-XL - port Descenta 2 do OpenGL-a
 Name:		d2x-xl
-Version:	1.15.86
+Version:	1.15.87
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.descent2.de/downloads/%{name}-src-%{version}.7z
-# Source0-md5:	edd05ebb779244a0cfd8ff17010b7bb6
+# Source0-md5:	de0d473239b7a45a58f9f62fd614306b
 URL:		http://www.descent2.de/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
