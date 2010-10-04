@@ -1,0 +1,11 @@
+--- d2x-xl/main/segment.cpp~	2010-10-04 13:26:58.936847667 +0200
++++ d2x-xl/main/segment.cpp	2010-10-04 13:40:32.053514333 +0200
+@@ -13,6 +13,8 @@
+ #include "segmath.h"
+ #include "text.h"
+ 
++typedef unsigned char byte;
++
+ // Number of vertices in current mine (ie, gameData.segs.vertices, pointed to by Vp)
+ //	Translate table to get opposite CSide of a face on a CSegment.
+ char	sideOpposite [MAX_SIDES_PER_SEGMENT] = {WRIGHT, WBOTTOM, WLEFT, WTOP, WFRONT, WBACK};
