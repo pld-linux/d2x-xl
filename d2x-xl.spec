@@ -34,7 +34,7 @@ D2X-XL - port Descenta 2 do OpenGL-a.
 7z x %{SOURCE0}
 7z x -y d2x-xl-makefiles.7z
 
-%patch0 -p1
+%patch -P0 -p1
 %{__sed} -i 's/-O3//' configure
 %{__sed} -i '/dialheap.h/d' main/gamedata.cpp
 
